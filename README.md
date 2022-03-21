@@ -1,4 +1,4 @@
-# projeto_ads
+# GoodBrowserGames - Projeto
 
 Jhonatan Felipe - 32091982
 
