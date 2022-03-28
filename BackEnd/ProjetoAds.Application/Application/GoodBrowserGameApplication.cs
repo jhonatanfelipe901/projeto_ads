@@ -40,7 +40,7 @@ namespace ProjetoAds.Application.Application
         {
             return await Task.Run(() =>
             {
-                var goodBrowserGame = GoodBrowserGame.CreateInstance(request.AdministradorId, request.CategoriaId, request.Descricao, request.UrlJogo, request.UrlVideoDemonstracao, request.UrlImagemIlustrativa, request.Ativo);
+                var goodBrowserGame = GoodBrowserGame.CreateInstance(request.AdministradorId, request.CategoriaId, request.Nome, request.Descricao, request.UrlJogo, request.UrlVideoDemonstracao, request.UrlImagemIlustrativa, request.Ativo);
 
                 _goodBrowserGameService.Insert(goodBrowserGame);
 
@@ -52,7 +52,7 @@ namespace ProjetoAds.Application.Application
         {
             return await Task.Run(() =>
             {
-                var goodBrowserGame = GoodBrowserGame.CreateInstanceUpdate(id, request.AdministradorId, request.CategoriaId, request.Descricao, request.UrlJogo, request.UrlVideoDemonstracao, request.UrlImagemIlustrativa, request.Ativo);
+                var goodBrowserGame = GoodBrowserGame.CreateInstanceUpdate(id, request.AdministradorId, request.CategoriaId, request.Nome, request.Descricao, request.UrlJogo, request.UrlVideoDemonstracao, request.UrlImagemIlustrativa, request.Ativo);
 
                 _goodBrowserGameService.Update(goodBrowserGame);
 

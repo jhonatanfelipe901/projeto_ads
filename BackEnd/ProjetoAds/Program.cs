@@ -16,6 +16,11 @@ builder.Services.AddJwtBearerAuthentication(builder.Configuration);
 ConfigureSettings(builder);
 ConfigureServices(builder);
 
+builder.Services.AddCors(p => p.AddDefaultPolicy(options =>
+{
+    options.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
